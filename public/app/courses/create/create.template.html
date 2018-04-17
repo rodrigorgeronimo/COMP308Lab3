@@ -1,0 +1,39 @@
+﻿<h1>New Course</h1>
+<form (ngSubmit)="create()" novalidate>
+    <img src="assets/logo.png">
+
+    <div>
+        <label for="courseCode">Course Code</label>
+        <div>
+            <input type="text" required [(ngModel)]="course.courseCode"
+                   name="courseCode" placeholder="Course Code">
+        </div>
+    </div>
+    <div>
+        <label for="courseName">Course Name</label>
+        <div>
+            <input type="text" required [(ngModel)]="course.courseName"
+                   name="courseName" placeholder="Course Name">
+        </div>
+    </div>
+    <div>
+        <label for="section">Section</label>
+        <div>
+            <textarea type="text" required cols="30" rows="10"
+                      [(ngModel)]="course.section" name="section" placeholder="Section">
+                </textarea>
+        </div>
+    </div>
+    <div>
+        <label for="semester">Semester</label>
+        <div>
+            <textarea type="text" required cols="30" rows="10"
+                      [(ngModel)]="course.semester" name="semester" placeholder="Semester">
+                </textarea>
+        </div>
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+    <strong id="error">{{errorMessage}}</strong>
+</form>
