@@ -12,12 +12,33 @@
                name="lastName">
     </div>
     <div>
+        <label>Address:</label>
+        <input type="text" [(ngModel)]="user.address" name="address">
+    </div>
+    <div>
+        <label>City:</label>
+        <input type="text" [(ngModel)]="user.city" name="city">
+    </div>
+    <div>
+        <label>Postal Code:</label>
+        <input type="text" [(ngModel)]="user.postalCode" name="postalCode">
+    </div>
+    <div>
+        <label>Phone Number:</label>
+        <input type="text" [(ngModel)]="user.phoneNumber" name="phoneNumber">
+    </div>
+    <div>
         <label>Email:</label>
         <input type="text" [(ngModel)]="user.email" name="email">
+    </div>    
+    <div>
+        <label>Program:</label>
+        <input type="text" [(ngModel)]="user.program" name="program">
     </div>
     <div>
         <label>
-        Student Number:</label>
+            Student Number:
+        </label>
         <input type="text" [(ngModel)]="user.studentNumber"
                name="studentNumber">
     </div>

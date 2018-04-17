@@ -5,13 +5,7 @@ const Schema = mongoose.Schema;
 
 // Define a new 'UserSchema'
 const UserSchema = new Schema({
-    firstName: String,
-    lastName: String,
-    email: {
-        type: String,
-        // Validate the email format
-        match: [/.+\@.+\..+/, "Please fill a valid email address"]
-    },
+
     studentNumber: {
         type: String,
         // Set a unique 'studentNumber' index
@@ -30,6 +24,32 @@ const UserSchema = new Schema({
             'Password should be longer'
         ]
     },
+    firstName: String,
+    lastName: String,
+    address: {
+        type: String
+    },
+    city: {
+        type: String
+    },
+    postalCode: {
+        type: String,
+        validate: [
+            (postalCode) => postalCode && postalCode.length <= 6,
+            'Postal Code should be 6 characters'
+        ]
+    },
+    phoneNumber: {
+        type: String
+    },
+    email: {
+        type: String,
+        // Validate the email format
+        match: [/.+\@.+\..+/, "Please fill a valid email address"]
+    },
+    program: {
+        type: String
+    },        
     salt: {
         type: String
     },
