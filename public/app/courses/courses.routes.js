@@ -1,7 +1,7 @@
-System.register(['./courses.component', './create/create.component', './list/list.component', './view/view.component', './edit/edit.component'], function(exports_1, context_1) {
+System.register(['./courses.component', './create/create.component', './list/list.component', './view/view.component', './edit/edit.component', './students-list/students-list.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var courses_component_1, create_component_1, list_component_1, view_component_1, edit_component_1;
+    var courses_component_1, create_component_1, list_component_1, view_component_1, edit_component_1, students_list_component_1;
     var CoursesRoutes;
     return {
         setters:[
@@ -19,6 +19,9 @@ System.register(['./courses.component', './create/create.component', './list/lis
             },
             function (edit_component_1_1) {
                 edit_component_1 = edit_component_1_1;
+            },
+            function (students_list_component_1_1) {
+                students_list_component_1 = students_list_component_1_1;
             }],
         execute: function() {
             exports_1("CoursesRoutes", CoursesRoutes = [{
@@ -28,7 +31,8 @@ System.register(['./courses.component', './create/create.component', './list/lis
                         { path: '', component: list_component_1.ListComponent },
                         { path: 'create', component: create_component_1.CreateComponent },
                         { path: ':courseId', component: view_component_1.ViewComponent },
-                        { path: ':courseId/edit', component: edit_component_1.EditComponent }
+                        { path: ':courseId/edit', component: edit_component_1.EditComponent },
+                        { path: 'students-list', component: students_list_component_1.StudentsListComponent }
                     ],
                 }]);
         }

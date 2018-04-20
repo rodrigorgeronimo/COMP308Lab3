@@ -59,6 +59,12 @@ System.register(['rxjs/Rx', 'rxjs/Observable', '@angular/core', '@angular/http']
                         .map(function (res) { return res.json(); })
                         .catch(this.handleError);
                 };
+                CoursesService.prototype.studentsList = function () {
+                    return this._http
+                        .get(this._baseURL)
+                        .map(function (res) { return res.json(); })
+                        .catch(this.handleError);
+                };
                 CoursesService.prototype.handleError = function (error) {
                     return Observable_1.Observable.throw(error.json().message || 'Server error');
                 };

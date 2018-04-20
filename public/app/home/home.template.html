@@ -5,7 +5,7 @@
         <h1>Welcome {{user.firstName}}</h1>
 
         <a [routerLink]="['/courses']" class="fl"><button>All courses</button></a>
-        <a [routerLink]="['/students']" class="fl margin-left"><button>All students</button></a>
+        <a [routerLink]="['/courses/students-list']" class="fl margin-left"><button>All students</button></a>
         
         <a href="/api/auth/signout" class="fl margin-left"><button class="signoutButton">Sign out</button></a>
     </div>

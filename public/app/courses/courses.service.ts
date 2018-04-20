@@ -34,6 +34,12 @@ export class CoursesService {
             .map((res: Response) => res.json())
             .catch(this.handleError);
     }
+    studentsList(): Observable<any> {
+        return this._http
+            .get(this._baseURL)
+            .map((res: Response) => res.json())
+            .catch(this.handleError);
+    }
     private handleError(error: Response) {
         return Observable.throw(error.json().message || 'Server error');
     }

@@ -8,6 +8,7 @@ import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
 import { ViewComponent } from './view/view.component';
 import { EditComponent } from './edit/edit.component';
+import { StudentsListComponent } from './students-list/students-list.component';
 @NgModule({
     imports: [
         CommonModule,
@@ -20,6 +21,7 @@ import { EditComponent } from './edit/edit.component';
         ListComponent,
         ViewComponent,
         EditComponent,
+        StudentsListComponent
     ]
 })
 export class CoursesModule { }
