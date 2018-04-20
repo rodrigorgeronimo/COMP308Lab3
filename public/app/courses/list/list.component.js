@@ -27,14 +27,14 @@ System.register(['@angular/core', '../courses.service'], function(exports_1, con
                 }
                 ListComponent.prototype.ngOnInit = function () {
                     var _this = this;
-                    this._coursesService.list().subscribe(function (courses) {
-                        return _this.courses
-                            = courses; });
+                    this._coursesService.list().subscribe(function (courses) { return _this.courses
+                        = courses; });
                 };
                 ListComponent = __decorate([
                     core_1.Component({
                         selector: 'list',
-                        templateUrl: 'app/courses/list/list.template.html'
+                        templateUrl: 'app/courses/list/list.template.html',
+                        styleUrls: ['./assets/css/style.css']
                     }), 
                     __metadata('design:paramtypes', [courses_service_1.CoursesService])
                 ], ListComponent);

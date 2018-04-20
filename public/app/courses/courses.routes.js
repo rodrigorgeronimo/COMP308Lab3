@@ -22,8 +22,8 @@ System.register(['./courses.component', './create/create.component', './list/lis
             }],
         execute: function() {
             exports_1("CoursesRoutes", CoursesRoutes = [{
-                path: 'courses',
-                component: courses_component_1.CoursesComponent,
+                    path: 'courses',
+                    component: courses_component_1.CoursesComponent,
                     children: [
                         { path: '', component: list_component_1.ListComponent },
                         { path: 'create', component: create_component_1.CreateComponent },

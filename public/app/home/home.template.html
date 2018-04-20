@@ -1,14 +1,19 @@
 ﻿<div *ngIf="user">
-    <img src="assets/logo.png">
+    <div id="container" style="width: 500px;">
+        <a href="/"><img src="assets/img/logo.jpg" width="200" /></a>
 
-    <h1>Hello {{user.firstName}}</h1>
-    <a href="/api/auth/signout">Signout</a>
-    <ul>
-        <li><a [routerLink]="['/courses']">List Courses</a></li>
-        <li><a [routerLink]="['/courses/create']">Create Course</a></li>
-    </ul>
+        <h1>Welcome {{user.firstName}}</h1>
+
+        <a [routerLink]="['/courses']" class="fl"><button>All courses</button></a>
+        <a [routerLink]="['/students']" class="fl margin-left"><button>All students</button></a>
+        
+        <a href="/api/auth/signout" class="fl margin-left"><button class="signoutButton">Sign out</button></a>
+    </div>
 </div>
+
 <div *ngIf="!user">
-    <a [routerLink]="['/authentication/signup']">Sign Up</a><br />
-    <a [routerLink]="['/authentication/signin']">Sign In</a>
+    <div style="width: 150px; margin: 25% auto;">
+        <a [routerLink]="['/authentication/signup']"><button>Sign up</button></a>
+        <a [routerLink]="['/authentication/signin']"><button>Sign in</button></a>
+    </div>
 </div>

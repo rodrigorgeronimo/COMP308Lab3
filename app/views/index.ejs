@@ -3,10 +3,19 @@
 <head>
 	<title><%= title %></title>
 	<base href="/">
+	<style>
+	.centered {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -75px;
+		margin-left: -75px;
+	}
+	</style>
 </head>
 <body>
 	<mean-app>
-		<h1>Loading...</h1>
+		<div class="centered"><img src="assets/img/loading.gif" width="150" /></div>
 	</mean-app>
 	
 	<script type="text/javascript">

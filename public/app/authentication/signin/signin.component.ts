@@ -4,7 +4,7 @@ import { AuthenticationService } from '../authentication.service';
 @Component({
     selector: 'signin',
     templateUrl: 'app/authentication/signin/signin.template.html',
-    styleUrls: ['app/authentication/signin/signin.template.css']
+    styleUrls: ['./assets/css/style.css']
 
 })
 export class SigninComponent {

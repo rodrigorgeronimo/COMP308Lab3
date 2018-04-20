@@ -45,10 +45,10 @@ System.register(['@angular/core', '@angular/router', '../../authentication/authe
                         _this._coursesService
                             .read(courseId)
                             .subscribe(function (course) {
-                                _this.course = course;
+                            _this.course = course;
                             _this.allowEdit = (_this.user && _this.user._id === _this.
                                 course.creator._id);
-                            }, function (error) { return _this._router.navigate(['/courses']); });
+                        }, function (error) { return _this._router.navigate(['/courses']); });
                     });
                 };
                 //
@@ -65,6 +65,7 @@ System.register(['@angular/core', '@angular/router', '../../authentication/authe
                     core_1.Component({
                         selector: 'view',
                         templateUrl: 'app/courses/view/view.template.html',
+                        styleUrls: ['./assets/css/style.css']
                     }), 
                     __metadata('design:paramtypes', [router_1.Router, router_1.ActivatedRoute, authentication_service_1.AuthenticationService, courses_service_1.CoursesService])
                 ], ViewComponent);

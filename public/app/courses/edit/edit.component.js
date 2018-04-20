@@ -51,7 +51,8 @@ System.register(['@angular/core', '@angular/router', '../courses.service'], func
                 EditComponent = __decorate([
                     core_1.Component({
                         selector: 'edit',
-                        templateUrl: 'app/courses/edit/edit.template.html'
+                        templateUrl: 'app/courses/edit/edit.template.html',
+                        styleUrls: ['./assets/css/style.css']
                     }), 
                     __metadata('design:paramtypes', [router_1.Router, router_1.ActivatedRoute, courses_service_1.CoursesService])
                 ], EditComponent);

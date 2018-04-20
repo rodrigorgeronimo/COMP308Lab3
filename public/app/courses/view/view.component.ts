@@ -5,6 +5,7 @@ import { CoursesService } from '../courses.service';
 @Component({
     selector: 'view',
     templateUrl: 'app/courses/view/view.template.html',
+    styleUrls: ['./assets/css/style.css']
 })
 export class ViewComponent {
     user: any;

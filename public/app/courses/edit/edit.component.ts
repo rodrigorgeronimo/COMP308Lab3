@@ -3,7 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { CoursesService } from '../courses.service';
 @Component({
     selector: 'edit',
-    templateUrl: 'app/courses/edit/edit.template.html'
+    templateUrl: 'app/courses/edit/edit.template.html',
+    styleUrls: ['./assets/css/style.css']
 })
 export class EditComponent {
     course: any = {};

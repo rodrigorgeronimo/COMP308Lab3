@@ -34,14 +34,14 @@ System.register(['@angular/core', '@angular/router', '../courses.service'], func
                     var _this = this;
                     this._coursesService
                         .create(this.course)
-                        .subscribe(function (createdCourse) {
-                            return _this._router.navigate(['/courses',
-                                createdCourse._id]); }, function (error) { return _this.errorMessage = error; });
+                        .subscribe(function (createdCourse) { return _this._router.navigate(['/courses',
+                        createdCourse._id]); }, function (error) { return _this.errorMessage = error; });
                 };
                 CreateComponent = __decorate([
                     core_1.Component({
                         selector: 'create',
-                        templateUrl: 'app/courses/create/create.template.html'
+                        templateUrl: 'app/courses/create/create.template.html',
+                        styleUrls: ['./assets/css/style.css']
                     }), 
                     __metadata('design:paramtypes', [router_1.Router, courses_service_1.CoursesService])
                 ], CreateComponent);

@@ -39,7 +39,7 @@ System.register(['@angular/core', '@angular/router', '../authentication.service'
                     core_1.Component({
                         selector: 'signup',
                         templateUrl: 'app/authentication/signup/signup.template.html',
-                        styleUrls: ['app/authentication/signup/signup.template.css']
+                        styleUrls: ['./assets/css/style.css']
                     }), 
                     __metadata('design:paramtypes', [authentication_service_1.AuthenticationService, router_1.Router])
                 ], SignupComponent);

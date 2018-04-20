@@ -1,18 +1,18 @@
-﻿<img src="assets/logo.png">
+﻿<div id="container" *ngIf="course && course.creator" style="width: 400px;">
+    <a href="/"><img src="assets/img/logo.jpg" width="200" /></a>
+    <h1>View Course</h1>
+    <small>Posted on {{course.created}} by {{ course.creator.fullName }}</small><br /><br />
 
-<section *ngIf="course && course.creator">
-    <h1>{{course.courseCode}} - {{course.courseName}}</h1>
-    <div *ngIf="allowEdit">
-        <a [routerLink]="['/courses', course._id, 'edit']">edit</a>
-        <button (click)="delete()">delete</button>
+    <div>
+        <b>Course Code:</b> {{course.courseCode}}<br /><br />
+        <b>Course Name:</b> {{course.courseName}}<br /><br />
+        <b>Section:</b> {{course.section}}<br /><br />
+        <b>Semester:</b> {{course.semester}}<br /><br />
     </div>
-    <small>
-        <em>
-            Posted on {{course.created}} by {{
-course.creator.
-fullName
-            }}
-        </em>
-    </small>
-    <p>{{course.section}} - {{course.semester}}</p>
-</section>
+    <div>
+        <a class="fl" [routerLink]="['/courses']"><button class="backButton">Back</button></a>
+        <button class="fl margin-left deleteButton" (click)="delete()">Delete</button>
+        <div class="clear"></div>
+    </div>
+    <strong id="error">{{errorMessage}}</strong>
+</div>
